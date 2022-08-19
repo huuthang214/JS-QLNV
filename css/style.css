@@ -1,0 +1,407 @@
+/*
+*  html5resetcss
+*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,300&family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,300&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
+html,
+body,
+div,
+span,
+object,
+iframe,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 600;
+  line-height: 1.2;
+  color: inherit;
+}
+
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background: #fafafa;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+.wrapper .sidebar {
+  width: 250px;
+  min-height: 100vh;
+  color: white;
+  transition: all 0.5s;
+  background-color: #7386D5;
+}
+.wrapper .sidebar-header {
+  background-color: #6d7fcc;
+  padding: 20px;
+}
+.wrapper .sidebar-header h3 {
+  font-size: 1.75rem;
+  display: block;
+}
+.wrapper .sidebar-header strong {
+  display: none;
+}
+.wrapper .sidebar ul {
+  background: #7386D5;
+  padding: 20px 0;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #47748b;
+}
+.wrapper .sidebar ul .active {
+  background-color: #6d7fcc;
+}
+.wrapper .sidebar ul li:hover a {
+  color: #6d7fcc;
+  background-color: white;
+}
+.wrapper .sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+  display: block;
+  padding: 10px;
+  font-size: 1.1em;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+.wrapper .sidebar ul li a i {
+  margin-right: 10px;
+}
+.wrapper .sidebar .edit-ul li a {
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.85rem;
+}
+.wrapper .sidebar .edit-ul li a i {
+  display: block;
+  margin: 0;
+  font-size: 1.8rem;
+}
+.wrapper .sidebar div {
+  padding: 20px;
+}
+.wrapper .sidebar div button {
+  width: 100%;
+  font-size: 14px;
+  text-align: left;
+  padding: 10px;
+  margin-bottom: 5px;
+  color: #7386D5;
+  background-color: white;
+}
+.wrapper .sidebar div button:last-child {
+  color: white;
+  background-color: #6d7fcc;
+}
+.wrapper .edit-nav {
+  width: 80px;
+}
+.wrapper .edit-nav h3 {
+  display: none;
+}
+.wrapper .edit-nav strong {
+  display: block;
+  font-size: 1.75rem;
+}
+.wrapper .edit-nav .sidebar-footer {
+  display: none;
+}
+.wrapper .content {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to right, #ACB6E5, #74ebd5);
+  padding: 20px;
+}
+.wrapper .content_header {
+  padding: 15px 10px;
+  margin-bottom: 40px;
+  background-color: white;
+}
+.wrapper .content_header-btn {
+  padding: 0 15px;
+  border: none;
+}
+.wrapper .content_header-btn :hover {
+  -webkit-animation: upDown 1s linear infinite;
+          animation: upDown 1s linear infinite;
+}
+.wrapper .content_main .card-header h3 {
+  font-weight: 700;
+  color: #007bff;
+}
+.wrapper .content_main .card-header button:hover {
+  -webkit-animation: upDown 1s linear infinite;
+          animation: upDown 1s linear infinite;
+}
+.wrapper .content_main .card-body div div button {
+  padding: 6px 12px;
+  background-color: #e9ecef;
+  border: none;
+  z-index: 0;
+}
+.wrapper .content_main .card-body div table {
+  border: 2px;
+  text-align: center;
+  color: #007bff;
+}
+.wrapper .content_main .card-body div table th:first-child span {
+  margin-right: 4px;
+}
+.wrapper .content_main .card-body div table th:first-child i {
+  cursor: pointer;
+}
+.wrapper .content_main .card-body div table th:first-child i:last-child {
+  display: none;
+}
+.wrapper .content_main .card-body div table th:last-child em {
+  cursor: pointer;
+}
+.wrapper .content_main .card-body div table tbody tr td {
+  vertical-align: middle;
+}
+
+.Modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 1s;
+  z-index: -1;
+}
+.Modal__main {
+  background-color: white;
+  width: 500px;
+  margin: auto;
+  border-radius: 5px;
+  transition: all 1s;
+  transform: translateY(-100vh);
+}
+.Modal__main .Modal__title {
+  text-align: center;
+  margin: 2% auto 0 auto;
+}
+.Modal__main .Modal__title h2 {
+  font-size: 250%;
+  font-weight: 400;
+  font-family: "Playfair Display", serif;
+  color: #3e403f;
+}
+.Modal__main .Modal__content {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+.Modal__main .Modal__content form {
+  width: 450px;
+  margin: 2% auto;
+  padding: 2%;
+  border-radius: 5px;
+  background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
+}
+.Modal__main .Modal__content form div .showError {
+  display: block;
+  font-size: 12px;
+  color: red;
+  margin: 5px 0;
+}
+.Modal__main .Modal__button {
+  padding: 16px;
+  text-align: right;
+}
+.Modal__main .Modal__button button {
+  margin: 0 4px;
+}
+
+.listNhanVien {
+  font-size: 14px;
+  color: black;
+}
+.listNhanVien tr td {
+  padding: 0.75rem 0.5rem;
+}
+.listNhanVien tr td:last-child button {
+  padding: 5px;
+}
+
+@-webkit-keyframes upDown {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes upDown {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=style.css.map */

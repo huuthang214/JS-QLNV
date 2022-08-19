@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BTN_21</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <!-- datePicker CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h3>Bootstrap Sidebar</h3>
+                <strong>BS</strong>
+            </div>
+            <ul>
+                <li class="active">
+                    <a href="#"><i class="fa fa-home"></i> home </a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-briefcase"></i> about </a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-files-o"></i> pages </a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-link"></i> portfolio </a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-paperclip"></i> FAQ </a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-paper-plane"></i> contact </a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <button class="btn">Download source</button>
+                <button class="btn">Back to artical</button>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="content_header">
+                <div class="content_header-btn">
+                    <button id="btnToggle" class="btn btn-info">
+                        <i class="fa fa-align-left"></i>
+                        <span>Toggle sidebar</span>
+                    </button>
+                </div>
+            </div>
+            <div class="content_main">
+                <div class="container-fluid">
+                    <form class="card">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h3>Danh sách nhân viên</h3>
+                            <button id="btnThemNv" class="btn btn-primary" type="button">
+                                <i class="fa fa-plus-square" aria-hidden="true"></i> Thêm nhân viên
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div class="input-group mb-3">
+                                <input id="blur" type="text" class="form-control" placeholder="Loại nhân viên"
+                                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button id="btnSearch" class="btn btn-outline-secondary" type="button"><i
+                                            class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <span>Tài khoản</span> 
+                                               
+                                            </th>
+                                            <th>Họ và tên</th>
+                                            <th>Email</th>
+                                            <th>Ngày làm</th>
+                                            <th>Chức vụ</th>
+                                            <th>Tổng lương</th>
+                                            <th>Xếp loại</th>
+                                            <th><em class="fa fa-cog"></em></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="listNhanVien">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <br>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Modal">
+        <div class="Modal__main">
+            <div class="Modal__title">
+                <h2>Log In</h2>
+            </div>
+            <div class="Modal__content">
+                <form>
+                    <div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control d-block" placeholder="Tài khoản" required>
+                        </div>
+                        <span class ="showError"></span>
+                    </div>
+                    <div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-address-book"></i></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Họ và Tên">
+                        </div>
+                        <span class ="showError"></span>
+                    </div>
+                    <div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                            </div>
+                            <input type="email" class="form-control" placeholder="YourEmail@gmail.com">
+                        </div>
+                        <span class ="showError"></span>
+                    </div>
+                    <div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-key"></i></i></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="Mật Khẩu">
+                        </div>
+                        <span class ="showError"></span>
+                    </div>
+                    <div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                            </div>
+                            <input id="selector" type="text" class="form-control" placeholder="2022-07-31">
+                            <img class="ui-datepicker-trigger ml-2" src="./img/calendar-icon.png" alt="Select date"
+                                title="Select date">
+                        </div>
+                        <span class ="showError"></span>
+                    </div>
+                    <div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-money" aria-hidden="true"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Lương cơ bản">
+                        </div>
+                        <span class ="showError"></span>
+                    </div>
+                    <div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-briefcase"></i></span>
+                            </div>
+                            <select id="selectValue" class="form-control">
+                                <option value="Nhân viên">Nhân viên</option>
+                                <option value="Trưởng Phòng">Trưởng Phòng</option>
+                                <option value="Sếp">Sếp</option>
+                            </select>
+                        </div>
+                        <span class ="showError"></span>
+                    </div>
+                    <div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Số giờ làm">
+                        </div>
+                        <span class ="showError"></span>
+                    </div>
+                </form>
+            </div>
+            <div class="Modal__button d-flex justify-content-end">
+                <button id="btnAdd" class="btn btn-success">Thêm người dùng</button>
+                <button id="btnUpdate" class="btn btn-success">Cập nhật</button>
+                <button class="btn btn-danger">Đóng</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- DatePicker -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        $("#selector").flatpickr();
+    </script>
+    <!-- MAIN JS -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
